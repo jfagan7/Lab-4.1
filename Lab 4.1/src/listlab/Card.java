@@ -5,10 +5,7 @@ public class Card {
 	private static String rank;
 	private static String suit;
 	private static int pointValue;
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public Card(String rank, String suit, int pointValue)
 	{
 		this.rank=rank;
