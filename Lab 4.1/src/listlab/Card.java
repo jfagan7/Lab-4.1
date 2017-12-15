@@ -30,6 +30,6 @@ public class Card {
 	}
 	public String toString()
 	{
-		return this.getPointValue()+"of"+" "+this.getSuit();
+		return this.getRank()+"of"+" "+this.getSuit();
 	}
 }
