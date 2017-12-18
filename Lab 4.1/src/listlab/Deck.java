@@ -20,19 +20,19 @@ public class Deck {
 		}
 	}
 	
-	public static boolean isEmpty(List<Card>deck)
+	public static boolean isEmpty()
 	{
-		return deck.size()==0;
+		return getUnDealt().size()==0;
 	}
-	public static int size(Deck deck)
+	public static int size()
 	{
-		return deck.size();
+		return getUnDealt().size();
 	}
 	public static Card deal(Deck deck)
 	{
-		if(!deck.isEmpty(unDealt))
+		if(!getUnDealt().isEmpty())
 		{
-			Card dealtCard=deck.get(0);
+			Card dealtCard=unDealt.get(0);
 			Dealt.add(dealtCard);
 			unDealt.remove(dealtCard);
 			return dealtCard;
@@ -47,5 +47,9 @@ public class Deck {
 			
 			
 		}
+	}
+	private static ArrayList<Card> getUnDealt()
+	{
+		return unDealt;
 	}
 }
