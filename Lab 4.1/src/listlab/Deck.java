@@ -41,11 +41,16 @@ public class Deck {
 	}
 	public static void shuffle()
 	{
-		int r=0;
+		
 		for(int k=51;k>=1;k--)
 		{
+			int r=(int)(Math.random()*52)+1;
+			Card cardToSwap=unDealt.get(k);
+			Card randomCard=unDealt.get(r);
 			
-			
+			Card temp=cardToSwap;
+			cardToSwap=randomCard;
+			randomCard=temp;
 		}
 	}
 	private static ArrayList<Card> getUnDealt()
