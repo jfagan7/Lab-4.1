@@ -1,7 +1,6 @@
 package listlab;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Deck {
 
@@ -16,21 +15,18 @@ public class Deck {
 			{
 				Card selectedCard = new Card(suit[i],rank[j],pointValue[j]);
 				unDealt.add(selectedCard);
+				System.out.print(selectedCard.toString());
 			}
 		}
 	}
 	
-	public static boolean isEmpty()
+	public boolean isEmpty()
 	{
 		return getUnDealt().size()==0;
 	}
-	public static int size()
-	{
-		return getUnDealt().size();
-	}
 	public static Card deal(Deck deck)
 	{
-		if(!getUnDealt().isEmpty())
+		if(!deck.isEmpty())
 		{
 			Card dealtCard=unDealt.get(0);
 			Dealt.add(dealtCard);
@@ -53,8 +49,20 @@ public class Deck {
 			randomCard=temp;
 		}
 	}
-	private static ArrayList<Card> getUnDealt()
-	{
+
+	public static ArrayList<Card> getUnDealt() {
 		return unDealt;
+	}
+
+	public static void setUnDealt(ArrayList<Card> unDealt) {
+		Deck.unDealt = unDealt;
+	}
+
+	public static ArrayList<Card> getDealt() {
+		return Dealt;
+	}
+
+	public static void setDealt(ArrayList<Card> dealt) {
+		Dealt = dealt;
 	}
 }

@@ -9,6 +9,7 @@ public class DeckTester {
 		int[] pointValue= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12, 13};
 		
 		Deck deck= new Deck(suit,rank,pointValue);
+		System.out.println(deck.toString());
 
 	}
 	
